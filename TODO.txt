@@ -1,0 +1,3 @@
+add products and notes
+skeletons
+swap to mobile on screen resize

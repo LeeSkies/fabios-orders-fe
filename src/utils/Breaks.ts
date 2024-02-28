@@ -1,0 +1,1 @@
+export const isMD = () => window.innerWidth < 768;
