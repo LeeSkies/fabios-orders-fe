@@ -17,6 +17,7 @@ export const useDetails = (orderId?: string | null) => {
 
   return useQuery({
     queryKey: ["order-details"],
+    // @ts-ignore
     queryFn: () => getOrderDetails(id),
   });
 };
