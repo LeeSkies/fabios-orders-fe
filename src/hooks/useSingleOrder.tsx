@@ -3,7 +3,9 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const getOrder = async (id: string) => {
-  const { data } = await axios.get("http://localhost:3000/orders/" + id);
+  const { data } = await axios.get(
+    import.meta.env.VITE_BASE_URL + "/orders/" + id
+  );
   return data;
 };
 

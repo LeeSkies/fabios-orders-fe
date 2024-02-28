@@ -14,7 +14,7 @@ export const OrderForm = ({ handleSubmit, formData, setFormData }: Props) => {
     <form
       onSubmit={(e) => handleSubmit(e)}
       action="#"
-      className="flex flex-col p-8 rounded-full gap-2 [&_input]:rounded [&_input]:p-4 [&_input]:bg-sky-100 [&_input]:border [&_input]:border-blue-300 [&_input:focus]:outline-none"
+      className="flex flex-col p-8 rounded-full gap-2 [&_input]:rounded [&_input]:p-4 [&_input:focus]:border-blue-500 [&_input]:duration-300 [&_input]:bg-sky-100 [&_input]:border [&_input]:border-blue-300 [&_input:focus]:outline-none"
     >
       <label htmlFor="">שם הלקוח</label>
       <input
@@ -82,7 +82,17 @@ export const OrderForm = ({ handleSubmit, formData, setFormData }: Props) => {
         value={formData.toDate}
         onChange={(e) => setFormData({ ...formData, toDate: e.target.value })}
       />
-      <div className="flex justify-between">
+      <label htmlFor="">הערות:</label>
+      <textarea
+        name=""
+        id=""
+        rows={3}
+        value={formData.notes}
+        onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+        placeholder="הערות"
+        className="resize-none rounded bg-sky-100 border border-blue-300 focus:outline-none focus:border-blue-500 duration-300"
+      ></textarea>
+      <div className="flex justify-between mt-4">
         <button
           type="submit"
           className="btn rounded px-4 p-3 border border-green-700 bg-green-100 w-20 text-green-700"

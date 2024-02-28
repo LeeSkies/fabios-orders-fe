@@ -14,7 +14,7 @@ export const useSearch = (onClear: Function, cb?: Function) => {
     queryFn: async () => {
       if (!query || query === "") return null;
       const { data } = await axios.get(
-        "http://localhost:3000/orders/search/" + query
+        import.meta.env.VITE_BASE_URL + "/orders/search/" + query
       );
       searchParams.set("loading", "false");
       setSearchParams(searchParams);

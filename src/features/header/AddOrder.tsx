@@ -19,7 +19,7 @@ export const AddOrder = (props: Props) => {
   const mutation = useMutation({
     mutationFn: async () => {
       try {
-        await axios.post("http://localhost:3000/orders", formData);
+        await axios.post(import.meta.env.VITE_BASE_URL + "/orders", formData);
         setModal(false);
         setFormData(new OrderFormData());
       } catch (error) {
